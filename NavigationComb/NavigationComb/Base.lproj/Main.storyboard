@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wIO-lI-t5B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -66,12 +67,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGl-GW-E3c">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGl-GW-E3c">
                                 <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="KGl-GW-E3c" secondAttribute="bottom" id="Mkd-sa-fQh"/>
+                            <constraint firstItem="KGl-GW-E3c" firstAttribute="top" secondItem="5dw-Ll-Cmf" secondAttribute="bottom" id="hXb-JK-Vpc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KGl-GW-E3c" secondAttribute="trailing" id="tdj-25-vbs"/>
+                            <constraint firstItem="KGl-GW-E3c" firstAttribute="leading" secondItem="g3J-hq-mSt" secondAttribute="leadingMargin" id="xuk-at-jNa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="edt-Q2-qHE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hsq-lQ-Nld">
@@ -164,12 +171,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-sE-9Pc">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-sE-9Pc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aQZ-sE-9Pc" firstAttribute="top" secondItem="CNd-s4-GpX" secondAttribute="topMargin" id="7bN-8l-U6w"/>
+                            <constraint firstItem="aQZ-sE-9Pc" firstAttribute="leading" secondItem="CNd-s4-GpX" secondAttribute="leadingMargin" constant="-16" id="DsK-IV-On6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQZ-sE-9Pc" secondAttribute="trailing" constant="-16" id="Tz0-qU-Zh6"/>
+                            <constraint firstItem="aQZ-sE-9Pc" firstAttribute="bottom" secondItem="CNd-s4-GpX" secondAttribute="bottomMargin" id="eYJ-TY-Ky5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B2U-E0-ccl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ODn-Ek-yIQ">
@@ -178,6 +191,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="aQZ-sE-9Pc" id="Cer-Gp-EiL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV0-m2-j3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,12 +258,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-yB-CEw">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-yB-CEw">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1O5-yB-CEw" firstAttribute="leading" secondItem="d1Q-Ba-1va" secondAttribute="leadingMargin" constant="-16" id="0W4-vy-i8u"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1O5-yB-CEw" secondAttribute="bottom" constant="8" id="NDG-dL-lzx"/>
+                            <constraint firstItem="1O5-yB-CEw" firstAttribute="top" secondItem="d1Q-Ba-1va" secondAttribute="topMargin" constant="-8" id="PnP-rt-02a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1O5-yB-CEw" secondAttribute="trailing" constant="-16" id="cOZ-6N-6tI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fhL-MD-fuf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eor-bD-TKa">
@@ -256,6 +278,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="1O5-yB-CEw" id="bS8-hK-SoP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYI-70-TQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,6 +338,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Qd5-h2-05x"/>
+        <segue reference="r0e-gI-h3y"/>
     </inferredMetricsTieBreakers>
 </document>
